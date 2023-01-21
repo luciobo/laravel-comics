@@ -13,15 +13,17 @@
             <div>
                 <ul class="m-0 d-flex list-unstyled ">
                     <li class="p-3">
-                        <a class="text-secondary text-decoration-none fw-bolder" href="{{ route('home') }}">HOME</a>
+                        <a  href="{{ route('home') }}" 
+                        class="{{Route::currentRouteName() === "home" ? "text-primary" : "text-secondary"}}">HOME</a>
                     </li>
                     <li class="p-3">
-                        <a class="text-secondary text-decoration-none fw-bolder" href="{{ route('about') }}">ABOUT</a>
+                        <a href="{{ route('about') }}"
+                        class="{{Route::currentRouteName() === "about" ? "text-primary" : "text-secondary"}}">ABOUT</a>
                     </li>
                 </ul>
             </div>
             <div>
-                <input class="border-bottom border-0 border-primary text-end w-75" text-center"  placeholder="search">
+                <input class="border-bottom border-0 border-primary text-end w-75" placeholder="search">
             </div>
         </div>
         </div>

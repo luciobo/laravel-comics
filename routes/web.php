@@ -14,11 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $fumettiArray = config('comics');
+    $cardInferiori = config('cardSotto');
+
+    return view('home',[
+
+    "fumettiArray" => $fumettiArray,
+    "cardInferiori" => $cardInferiori,
+
+
+    ]);
+
 })->name("home");
 
 
 Route::get('/about', function () {
     return view('about');
 })->name("about");
+
+
 
